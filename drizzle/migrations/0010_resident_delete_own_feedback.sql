@@ -1,0 +1,1 @@
+CREATE POLICY "resident delete own feedback" ON public.feedback FOR DELETE TO authenticated USING (auth.uid() = user_id);

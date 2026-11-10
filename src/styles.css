@@ -1,0 +1,327 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  /* Role brand scale */
+  --color-brand-deep: var(--brand-deep);
+  --color-brand: var(--brand);
+  --color-brand-mid: var(--brand-mid);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-pale: var(--brand-pale);
+  --color-on-brand: var(--on-brand);
+  --color-on-brand-muted: var(--on-brand-muted);
+  /* Status */
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-danger-bright: var(--danger-bright);
+  --color-danger-bright-soft: var(--danger-bright-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  /* Waste categories */
+  --color-organic: var(--organic);
+  --color-inorganic: var(--inorganic);
+  --color-residue: var(--residue);
+  --color-hazard: var(--hazard);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Default = community (Elegant Forest Green) */
+:root,
+.theme-community {
+  --radius: 0.9rem;
+  --brand-deep: #123b2a;
+  --brand: #1b4d38;
+  --brand-mid: #347653;
+  --brand-soft: #a9c7ae;
+  --brand-pale: #f2f7f2;
+  --on-brand: #fcfdfb;
+  --on-brand-muted: color-mix(in oklab, #fcfdfb 72%, #a9c7ae);
+  --background: #fcfdfb;
+  --foreground: #10241a;
+  --card: #ffffff;
+  --card-foreground: #10241a;
+  --popover: #ffffff;
+  --popover-foreground: #10241a;
+  --primary: #1b4d38;
+  --primary-foreground: #fcfdfb;
+  --secondary: #f2f7f2;
+  --secondary-foreground: #1b4d38;
+  --muted: #f2f7f2;
+  --muted-foreground: #5b6f63;
+  --accent: #e6efe7;
+  --accent-foreground: #123b2a;
+  --border: #e1e7e1;
+  --input: #e1e7e1;
+  --ring: #347653;
+  --chart-1: #347653;
+  --chart-2: #a9c7ae;
+  --hero-gradient: radial-gradient(120% 90% at 100% 0%, #347653 0%, transparent 55%),
+    linear-gradient(160deg, #1b4d38 0%, #123b2a 70%);
+  --shadow-card: 0 1px 2px rgb(18 59 42 / 0.05), 0 8px 24px -12px rgb(18 59 42 / 0.18);
+}
+
+/* Officer (Elegant Blue) */
+.theme-officer {
+  --brand-deep: #17365d;
+  --brand: #1d4e89;
+  --brand-mid: #3478b8;
+  --brand-soft: #dceaf7;
+  --brand-pale: #f1f6fc;
+  --on-brand: #fcfdfb;
+  --on-brand-muted: color-mix(in oklab, #fcfdfb 75%, #dceaf7);
+  --background: #fcfdfb;
+  --foreground: #13243a;
+  --card: #ffffff;
+  --card-foreground: #13243a;
+  --popover: #ffffff;
+  --popover-foreground: #13243a;
+  --primary: #1d4e89;
+  --primary-foreground: #fcfdfb;
+  --secondary: #f1f6fc;
+  --secondary-foreground: #1d4e89;
+  --muted: #f1f6fc;
+  --muted-foreground: #637184;
+  --accent: #dceaf7;
+  --accent-foreground: #17365d;
+  --border: #dce4ed;
+  --input: #dce4ed;
+  --ring: #3478b8;
+  --chart-1: #3478b8;
+  --chart-2: #dceaf7;
+  --hero-gradient: radial-gradient(110% 90% at 100% 0%, #3478b8 0%, transparent 55%),
+    linear-gradient(160deg, #1d4e89 0%, #17365d 75%);
+  --shadow-card: 0 1px 2px rgb(23 54 93 / 0.05), 0 8px 24px -12px rgb(23 54 93 / 0.2);
+}
+
+/* Admin (Elegant Gray) */
+.theme-admin {
+  --radius: 0.75rem;
+  --brand-deep: #252b2b;
+  --brand: #343d3d;
+  --brand-mid: #596568;
+  --brand-soft: #e5e9e9;
+  --brand-pale: #f3f5f5;
+  --on-brand: #fcfdfb;
+  --on-brand-muted: #b9c2c3;
+  --background: #f3f5f5;
+  --foreground: #1e2424;
+  --card: #fcfdfb;
+  --card-foreground: #1e2424;
+  --popover: #fcfdfb;
+  --popover-foreground: #1e2424;
+  --primary: #252b2b;
+  --primary-foreground: #fcfdfb;
+  --secondary: #e5e9e9;
+  --secondary-foreground: #252b2b;
+  --muted: #f3f5f5;
+  --muted-foreground: #596568;
+  --accent: #e5e9e9;
+  --accent-foreground: #252b2b;
+  --border: #dde2e2;
+  --input: #dde2e2;
+  --ring: #849092;
+  --chart-1: #596568;
+  --chart-2: #849092;
+  --hero-gradient: linear-gradient(135deg, #343d3d 0%, #252b2b 100%);
+  --shadow-card: 0 1px 2px rgb(37 43 43 / 0.04);
+}
+
+:root {
+  --destructive: #b42318;
+  --destructive-foreground: #fcfdfb;
+  --success: #1f7a4d;
+  --success-soft: #e3f3ea;
+  --warning: #9a6700;
+  --warning-soft: #fff4d6;
+  --danger: #b42318;
+  --danger-soft: #fde8e6;
+  /* Readable danger tint for dark surfaces (desktop sidebar) */
+  --danger-bright: #ff9b93;
+  --danger-bright-soft: rgb(255 155 147 / 0.16);
+  --info: #1d4e89;
+  --info-soft: #e3eefa;
+  --organic: #347653;
+  --inorganic: #c58a00;
+  --residue: #6b7280;
+  --hazard: #c2410c;
+  --sidebar: #252b2b;
+  --sidebar-foreground: #dfe5e5;
+  --sidebar-primary: #fcfdfb;
+  --sidebar-primary-foreground: #252b2b;
+  --sidebar-accent: #343d3d;
+  --sidebar-accent-foreground: #fcfdfb;
+  --sidebar-border: #343d3d;
+  --sidebar-ring: #849092;
+}
+
+@utility bg-hero {
+  background: var(--hero-gradient);
+}
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+@utility font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: 0;
+}
+@utility organic-blob {
+  border-radius: 62% 38% 55% 45% / 48% 60% 40% 52%;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Shared role-aware desktop surfaces */
+.theme-community { --sidebar: var(--brand-deep); --sidebar-foreground: var(--on-brand); --sidebar-primary: var(--brand-pale); --sidebar-primary-foreground: var(--brand); --sidebar-accent: var(--brand); --sidebar-accent-foreground: var(--on-brand); }
+.theme-officer { --sidebar: var(--brand-deep); --sidebar-foreground: var(--on-brand); --sidebar-primary: var(--brand-pale); --sidebar-primary-foreground: var(--brand); --sidebar-accent: var(--brand); --sidebar-accent-foreground: var(--on-brand); }
+.theme-admin { --sidebar: #3f4545; --sidebar-foreground: #e6e9e9; --sidebar-primary: #f2f4f4; --sidebar-primary-foreground: #3f4545; --sidebar-accent: #565e5e; --sidebar-accent-foreground: #ffffff; --sidebar-border: #4d5555; --sidebar-ring: #9aa3a3; }
+:root { --photo-overlay: linear-gradient(90deg, rgb(10 30 23 / 0.86), rgb(10 30 23 / 0.36) 65%, rgb(10 30 23 / 0.06)); --marker-shadow: 0 2px 8px rgb(0 0 0 / 0.35); }
+.photo-shade { background: var(--photo-overlay); }
+.role-cover { border-radius: 8px; min-height: 290px; }
+.location-map { z-index: 0; background: var(--muted); }
+.map-marker { display: block; width: 28px; height: 28px; border-radius: 50% 50% 50% 0; border: 3px solid var(--on-brand); background: var(--brand); transform: rotate(-45deg); box-shadow: var(--marker-shadow); }
+.map-marker::after { content: ""; display: block; width: 8px; height: 8px; margin: 7px; border-radius: 50%; background: var(--on-brand); }
+.leaflet-container { font-family: var(--font-sans); }
+.leaflet-control-zoom a { background: var(--card); color: var(--foreground); }
+@keyframes enter-surface { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes photo-drift { from { transform: scale(1); } to { transform: scale(1.055); } }
+@keyframes leaf-sway { 0%, 100% { transform: translateY(0) rotate(-12deg); } 50% { transform: translateY(-9px) rotate(7deg); } }
+@keyframes recycle-turn { to { transform: rotate(360deg); } }
+.page-enter { animation: enter-surface 450ms ease-out both; }
+.role-intro { animation: enter-surface 700ms ease-out both; }
+.role-photo { animation: photo-drift 18s ease-in-out infinite alternate; }
+.role-emblem { animation: recycle-turn 36s linear infinite; }
+.role-leaf { animation: leaf-sway 6s ease-in-out infinite; }
+.role-option { animation: enter-surface 650ms ease-out both; transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease; }
+.role-option:nth-child(2) { animation-delay: 110ms; }
+.role-option:nth-child(3) { animation-delay: 220ms; }
+.role-icon, .role-arrow { transition: transform 250ms ease; }
+.role-option:hover .role-icon { transform: rotate(-7deg); }
+.role-option:hover .role-arrow { transform: translate(3px, -3px); }
+.guide-item { transition: transform 250ms ease, border-color 250ms ease; }
+.guide-item:hover { transform: translateY(-3px); border-color: var(--brand-soft); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+/* Colorful-but-elegant green role selection */
+:root {
+  --rs-forest: #0f3d2c;
+  --rs-emerald: #1f7a52;
+  --rs-jade: #2fa36b;
+  --rs-lime: #9fd36b;
+  --rs-mint: #e6f4ea;
+  --rs-cream: #f7fbf4;
+  --rs-teal: #1d8a7a;
+  --rs-gold: #e7c55a;
+}
+.role-selection {
+  background:
+    radial-gradient(60rem 30rem at 110% -10%, color-mix(in oklab, var(--rs-lime) 35%, transparent), transparent 60%),
+    radial-gradient(50rem 30rem at -10% 110%, color-mix(in oklab, var(--rs-jade) 25%, transparent), transparent 60%),
+    linear-gradient(180deg, var(--rs-cream), var(--rs-mint));
+}
+.role-cover-green { border-radius: 24px; min-height: 300px; background: linear-gradient(135deg, var(--rs-forest), var(--rs-emerald) 55%, var(--rs-jade)); }
+.role-cover-green .photo-shade { background: linear-gradient(100deg, color-mix(in oklab, var(--rs-forest) 92%, transparent) 25%, color-mix(in oklab, var(--rs-emerald) 55%, transparent) 65%, transparent); }
+.role-chip { background: color-mix(in oklab, var(--rs-lime) 30%, transparent); color: var(--rs-cream); border: 1px solid color-mix(in oklab, var(--rs-lime) 55%, transparent); }
+.role-accent { color: var(--rs-lime); }
+.role-card { position: relative; overflow: hidden; border-radius: 20px; background: var(--card); border: 1px solid color-mix(in oklab, var(--rs-jade) 22%, transparent); box-shadow: 0 10px 30px -18px color-mix(in oklab, var(--rs-forest) 60%, transparent); }
+.role-card:hover { box-shadow: 0 22px 40px -20px color-mix(in oklab, var(--rs-forest) 70%, transparent); border-color: var(--rs-jade); }
+.role-card-band { height: 6px; }
+.role-card-community .role-card-band, .role-card-community .role-card-icon { background: linear-gradient(135deg, var(--rs-jade), var(--rs-lime)); }
+.role-card-officer .role-card-band, .role-card-officer .role-card-icon { background: linear-gradient(135deg, var(--rs-teal), var(--rs-jade)); }
+.role-card-admin .role-card-band, .role-card-admin .role-card-icon { background: linear-gradient(135deg, var(--rs-forest), var(--rs-emerald)); }
+.role-card-icon { color: var(--rs-cream); }
+.role-card-glow { position: absolute; right: -40px; bottom: -40px; width: 140px; height: 140px; border-radius: 9999px; background: color-mix(in oklab, var(--rs-lime) 18%, transparent); transition: transform 400ms ease; }
+.role-card:hover .role-card-glow { transform: scale(1.3); }
+.role-heading { color: var(--rs-forest); }
+.role-eyebrow { color: var(--rs-emerald); }
+.auth-backdrop { background: linear-gradient(180deg, var(--rs-cream), var(--rs-mint)); }
+
+/* Bottom navigation */
+.bottom-nav { background: color-mix(in oklab, var(--card) 92%, transparent); backdrop-filter: blur(12px); box-shadow: 0 -8px 24px -16px color-mix(in oklab, var(--brand-deep) 50%, transparent); padding-bottom: env(safe-area-inset-bottom); }
+.bottom-nav-item[data-active="true"] { color: var(--brand); }
+.bottom-nav-item[data-active="true"] .bottom-nav-pill { background: var(--brand-pale); }
+
+/* Feature tiles & profile */
+.feature-tile { transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease; }
+.feature-tile:hover { transform: translateY(-3px); border-color: var(--brand-soft); }
+.profile-hero { background: linear-gradient(135deg, var(--brand-pale), color-mix(in oklab, var(--brand-soft) 45%, var(--card))); }
+.info-banner { background: linear-gradient(135deg, var(--brand-pale), color-mix(in oklab, var(--brand-soft) 35%, var(--card))); }
+
+/* Colorful accents + motion */
+:root {
+  --tile-0: #1f9d6b; --tile-0-soft: #dcf5e9;
+  --tile-1: #2f7fd1; --tile-1-soft: #e0edfb;
+  --tile-2: #e08a12; --tile-2-soft: #fdf0d9;
+  --tile-3: #d14b6b; --tile-3-soft: #fbe3e9;
+  --tile-4: #7a55c7; --tile-4-soft: #ece5fa;
+}
+.feature-tile { animation: enter-surface 500ms ease-out both; position: relative; overflow: hidden; }
+.feature-tile::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--tile-c); }
+.feature-tile:hover { box-shadow: 0 12px 28px -14px var(--tile-c); border-color: var(--tile-c); }
+.tile-0 { --tile-c: var(--tile-0); --tile-s: var(--tile-0-soft); }
+.tile-1 { --tile-c: var(--tile-1); --tile-s: var(--tile-1-soft); }
+.tile-2 { --tile-c: var(--tile-2); --tile-s: var(--tile-2-soft); }
+.tile-3 { --tile-c: var(--tile-3); --tile-s: var(--tile-3-soft); }
+.tile-4 { --tile-c: var(--tile-4); --tile-s: var(--tile-4-soft); }
+.tile-icon { background: var(--tile-s); color: var(--tile-c); transition: transform 300ms ease; }
+.feature-tile:hover .tile-icon { transform: scale(1.1) rotate(-6deg); }
+.fade-up { animation: enter-surface 550ms ease-out both; }
+.guide-item:nth-child(2) { animation-delay: 80ms; } .guide-item:nth-child(3) { animation-delay: 160ms; } .guide-item:nth-child(4) { animation-delay: 240ms; }
+.form-panel { animation: enter-surface 350ms ease-out both; border-top: 4px solid var(--brand-mid); }
+main article, main section { animation: enter-surface 450ms ease-out both; }
+main button { transition: transform 150ms ease, filter 150ms ease; }
+main button:active { transform: scale(0.97); }

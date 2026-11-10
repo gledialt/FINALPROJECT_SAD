@@ -1,0 +1,2 @@
+ALTER TABLE public.schedules ALTER COLUMN area SET DEFAULT 'Umum';
+COMMENT ON COLUMN public.schedules.area IS 'DEPRECATED: wilayah tidak lagi dipakai pada jadwal; jadwal kini hanya tanggal, jam, dan catatan.';

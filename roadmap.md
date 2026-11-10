@@ -1,0 +1,18 @@
+# Tasks
+- [x] Deliver a use-case image matching current role permissions.
+- [x] Deliver an image-only PDF of public pages, resident, officer and admin pages plus available main forms/dialogs (63 captured images).
+- [x] Admin account adminsmartwaste@gmail.com.
+- [x] "Ingat saya" on login; residents register and log in without email verification.
+- [x] Bottom navigation (masyarakat: Beranda/Informasi/Akun; admin & petugas: Beranda/Akun).
+- [x] Profile page with biodata and photo change.
+- [x] Sorting guide shown on Beranda; admin edits via Beranda.
+- [x] Search on announcements, processes, schedules (all roles) and user management.
+- [x] Greener, more colorful role selection page.
+- [x] Location info banner and RW 10 schedule/activity status, editable by admin & petugas.
+- [x] Admin inputs new-user password; plaintext email delivery omitted for credential safety.
+- [x] Remove stale role reservations on deletion and isolate ordinary signup roles.
+- [x] Separate forgot-password page with email code verification and new password.
+- [x] Code-only recovery email template (supabase/templates/recovery.html, 6-digit code, 10 min expiry, no reset link). Must be applied to the Cloud auth email settings (see supabase/config.toml).
+- [ ] Account email with login website link: blocked until sender domain and public website address are available; exclude plaintext passwords.
+- [x] Align Beranda feature tiles and gray admin sidebar.
+- [x] Admin "Hapus permanen" on Kelola Pengguna: email-confirmation dialog, blocks self-delete and the last active admin.

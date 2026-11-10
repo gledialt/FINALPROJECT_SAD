@@ -1,0 +1,5 @@
+CREATE POLICY "staff manage announcements" ON public.announcements FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'petugas')) WITH CHECK (public.has_role(auth.uid(), 'petugas'));
+CREATE POLICY "staff manage processes" ON public.processes FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'petugas')) WITH CHECK (public.has_role(auth.uid(), 'petugas'));
+CREATE POLICY "staff manage locations" ON public.locations FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'petugas')) WITH CHECK (public.has_role(auth.uid(), 'petugas'));
+CREATE POLICY "staff manage schedules" ON public.schedules FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'petugas')) WITH CHECK (public.has_role(auth.uid(), 'petugas'));
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.announcements, public.processes, public.locations, public.schedules TO authenticated;

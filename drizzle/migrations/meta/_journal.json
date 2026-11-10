@@ -1,0 +1,90 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1792214686237,
+      "tag": "0000_smart_waste_schema",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792498453622,
+      "tag": "0001_secure_user_invitations",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792499009527,
+      "tag": "0002_atomic_admin_role_assignment",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1792590584849,
+      "tag": "0003_officer_operational_management",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1792646599981,
+      "tag": "0004_editable_guides_schedule_dates",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1792767002997,
+      "tag": "0005_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1792840156353,
+      "tag": "0006_isolate_signup_roles_and_cleanup_deleted_accounts",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1792844152697,
+      "tag": "0007_bootstrap_admin",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1793099911107,
+      "tag": "0008_feedback_feature",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1793197476487,
+      "tag": "0009_email_notification_outbox",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1793252199744,
+      "tag": "0010_resident_delete_own_feedback",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1793256894902,
+      "tag": "0011_drop_schedule_area_requirement",
+      "breakpoints": true
+    }
+  ]
+}
